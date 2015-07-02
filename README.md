@@ -1,2 +1,3 @@
 # get_english_books
-get english books (python learn)
+
+Проект призначений для навчання програмуванню на Python-i і заодно для скачування книжок на англійській мові
