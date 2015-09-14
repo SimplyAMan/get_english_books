@@ -1,3 +1,7 @@
-# get_english_books
+# get_english_files
 
 Проект призначений для навчання програмуванню на Python-i і заодно для скачування книжок на англійській мові
+
+- get_english_e_books.py - скачування адаптованих книжок на англійській мові
+- get_voa_podcask.py - скачування подкастів з Voise Of America
+
