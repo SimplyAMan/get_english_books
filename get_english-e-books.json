@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "book_level": "Elementary",
+      "book_url": "http://english-e-books.net/elementary/"
+    },
+    {
+      "book_level": "Pre-Intermediate",
+      "book_url": "http://english-e-books.net/pre-intermediate/"
+    },
+    {
+      "book_level": "Intermediate",
+      "book_url": "http://english-e-books.net/intermediate/"
+    },
+    {
+      "book_level": "Upper-Intermediate",
+      "book_url": "http://english-e-books.net/upper-intermediate"
+    },
+    {
+      "book_level": "Advanced",
+      "book_url": "http://english-e-books.net/advanced/"
+    }
+  ],
+  "path": "Output"
+}

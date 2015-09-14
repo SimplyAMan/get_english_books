@@ -3,6 +3,15 @@ import urllib.request
 from bs4 import BeautifulSoup
 import web_utils
 import os
+import json
+
+
+def get_log_name():
+    return os.path.basename(__file__).split('.')[0] + '.log'
+
+
+def get_config_name():
+    return os.path.basename(__file__).split('.')[0] + '.json'
 
 
 def get_url(url, dest_path):
@@ -26,21 +35,11 @@ def get_url(url, dest_path):
         pass
 
 if __name__ == "__main__":
-    config = {
-        'path': 'Output',
-        'books': [
-            {'book_level': 'Elementary',
-             'book_url': 'http://english-e-books.net/elementary/'},
-            {'book_level': 'Pre-Intermediate',
-             'book_url': 'http://english-e-books.net/pre-intermediate/'},
-            {'book_level': 'Intermediate',
-             'book_url': 'http://english-e-books.net/intermediate/'},
-            {'book_level': 'Upper-Intermediate',
-             'book_url': 'http://english-e-books.net/upper-intermediate'},
-            {'book_level': 'Advanced',
-             'book_url': 'http://english-e-books.net/advanced/'}]}
+    with open(get_config_name()) as json_data_file:
+        config = json.load(json_data_file)
 
     for book in config['books']:
+        print(book['book_level'])
         path = os.path.join(config['path'], book['book_level'])
         os.makedirs(path, exist_ok=True)
         contents = urllib.request.urlopen(book['book_url'])
